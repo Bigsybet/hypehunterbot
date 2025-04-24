@@ -31,7 +31,8 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
 
 # --- Constants and API keys (embedded) ---
-BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN_HERE"
+import os
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 HF_API_KEY = "YOUR_HUGGINGFACE_API_KEY_HERE"
 # Admin user IDs (replace with actual IDs)
 ADMIN_IDS = [123456789]
